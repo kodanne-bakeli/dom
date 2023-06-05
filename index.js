@@ -60,7 +60,7 @@ function Taches() {
     let tache0 = document.querySelector('#tache0').value
     document.querySelector('#list').innerHTML +=
         `<div class="d-flex justify-content-around">
-        <input type="text" value="${tache0}" class="form-control bg-danger-subtle" id="tache2">
+        <input type="text" value="${tache0}" class="form-control bg-danger" id="tache2">
         <input type="button" class="btn btn-danger" onclick="Todo()" value="to do" id="todo2">
         <input type="button" class="btn btn-warning" onclick="Doing()" value="doing" id="doing2">
         <input type="button" class="btn btn-success" onclick="Done()" value="done" id="done2">
