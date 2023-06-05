@@ -57,14 +57,13 @@ document.getElementById("done3").onclick = function Done() {
 }
 //**************créationd de tâches********** */
 function Taches() {
-
+    let tache0 = document.querySelector('#tache0').value
     document.querySelector('#list').innerHTML +=
-        `<form name="tache1" class="m-3 p-3 d-flex justify-content-center">
-             <input type="text" class="form-control bg-danger text-white" placeholder="saisir une tâche à faire"
-             id="tache">
-         <input type="button" class="btn btn-danger" onclick="Todo()" value="to do" name="todo">
-         <input type="button" class="btn btn-warning" onclick="Doing()" value="doing">
-         <input type="button" class="btn btn-success" onclick="Done()" value="done">
-             </form>`
+        `<div class="d-flex justify-content-around">
+        <input type="text" value="${tache0}" class="form-control bg-danger-subtle" id="tache2">
+        <input type="button" class="btn btn-danger" onclick="Todo()" value="to do" id="todo2">
+        <input type="button" class="btn btn-warning" onclick="Doing()" value="doing" id="doing2">
+        <input type="button" class="btn btn-success" onclick="Done()" value="done" id="done2">
+    </div>`
 }
  
