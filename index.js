@@ -26,7 +26,7 @@ function Done() {
 function Taches() {
 
     let tache0 = document.querySelector('#tache0').value
-
+    
     document.querySelector('#form2').innerHTML +=
         `<div class="d-flex justify-content-around align-items-center w-75 mx-auto my-2 p-2 rounded border border-danger">
         ${tache0}
@@ -34,5 +34,16 @@ function Taches() {
         <input type="button" class="btn btn-warning doing" onclick="Doing()" value="doing">
         <input type="button" class="btn btn-success done" onclick="Done()" value="done">
     </div>`
-
 }
+
+//********gestion du clavier*****/
+window.addEventListener("keydown", function(e){
+    
+       if( e.key == "Enter"){
+        
+           Taches()
+           event.preventDefault();
+           
+       }
+       
+       })
