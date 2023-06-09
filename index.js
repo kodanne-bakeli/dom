@@ -23,17 +23,23 @@ function Done() {
 }
 
 //**************création de tâches********** */
-function Taches() {
+function Taches(e){
+    event.preventDefault()
+    addToDo()
+}
 
-    let tache0 = document.querySelector('#tache0').value
+function addToDo() {
+    let tache0 = document.getElementById('tache0')
+    
     
     document.querySelector('#form2').innerHTML +=
         `<div class="d-flex justify-content-around align-items-center w-75 mx-auto my-2 p-2 rounded border border-danger">
-        ${tache0}
+        ${tache0.value}
         <input type="button" class="btn btn-danger todo" onclick="Todo()" value="to do">
         <input type="button" class="btn btn-warning doing" onclick="Doing()" value="doing">
         <input type="button" class="btn btn-success done" onclick="Done()" value="done">
     </div>`
+    tache0.value = " "
 }
 
 //********gestion du clavier*****/
@@ -43,7 +49,7 @@ window.addEventListener("keydown", function(e){
         
            Taches()
            event.preventDefault();
-           
+           tache0 = ""
        }
        
        })
